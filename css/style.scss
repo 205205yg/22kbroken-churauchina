@@ -21,6 +21,7 @@ body {
 
 .header {
 	position: fixed;
+	z-index: 9999;
 	top: 0;
 	width: 100%;
 	min-width: 1000px;
@@ -49,7 +50,6 @@ body {
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	height: 1500px;
 
 	.nav {
 		width: 230px;
@@ -61,9 +61,6 @@ body {
 				margin: 0 0 10px 0;
 				box-shadow: 0 0 5px rgb(0 0 0 / 30%);
 				position: relative;
-
-
-
 			}
 
 			a {
@@ -108,11 +105,87 @@ body {
 					}
 				}
 			}
+
+			a.current {
+				color: #fff;
+				background: rgb(30, 105, 185);
+
+				&:before {
+					left: calc(100% - 12px);
+					width: 6px;
+					height: 10px;
+					border-top: 6px solid transparent;
+					border-right: 6px solid transparent;
+					border-bottom: 6px solid transparent;
+					border-left: 6px solid rgba(255, 165, 80, 1);
+					transition: all 0.2s;
+				}
+			}
 		}
 	}
 
 	.content {
 		width: 770px;
+		padding: 0 12px;
+
+		.main-image {
+			margin: 0 0 30px 0;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.info-ttl {
+			font-size: 20px;
+			// margin: 0 0 10px 0;
+			padding: 0 0 0 1em;
+			color: #fff;
+			background: #c55a11;
+			// box-shadow: 2px 2px 3px rgb(0 0 0 / 30%);
+		}
+
+		.information {
+			height: 215px;
+			overflow: scroll;
+
+
+			ul {
+				font-size: 15px;
+				line-height: 1.6;
+
+				li {
+					display: flex;
+					flex-direction: row;
+					list-style-type: none;
+					border-bottom: 1px dotted #000;
+					padding: 14px 0;
+
+
+					span.date {
+						display: block;
+						position: relative;
+						width: 120px;
+						text-indent: 2em;
+
+						&::before {
+							content: "";
+							position: absolute;
+							top: 9px;
+							left: 0.7em;
+							width: 7px;
+							height: 7px;
+							border-radius: 1em;
+							background: #ff953d;
+						}
+					}
+
+					p {
+						width: 626px;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -120,4 +193,41 @@ body {
 	width: 100%;
 	min-width: 1000px;
 	margin: 0 auto;
+	box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+
+	.footer-inner {
+		width: 1000px;
+		padding: 30px 0;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
+
+		address {
+			width: 33%;
+			font-size: 13px;
+			line-height: 1.6;
+
+			h3 {
+				font-weight: bold;
+				color: rgb(30, 105, 185);
+				border-bottom: dotted 1px rgb(90, 120, 200);
+				padding: 2px 0;
+				margin: 0 0 6px 0;
+			}
+
+			p.address-name {
+				font-size: 15px;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.copyright {
+		background: rgb(0, 162, 218);
+		font-size: 13px;
+		padding: 6px 0;
+		color: #fff;
+		text-align: center;
+	}
 }
