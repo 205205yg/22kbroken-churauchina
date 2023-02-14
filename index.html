@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=1000">
 	<title>第22回九州ブロック介護老人保健施設大会 美ら沖縄</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -97,7 +98,31 @@
 		</footer>
 	</div>
 
+	<div id="pagetop">
+		<span>TOP</span>
+	</div>
 
+
+
+	<script>
+		$(function () {
+			var pagetop = $('#pagetop');
+			pagetop.hide();
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					pagetop.fadeIn();
+				} else {
+					pagetop.fadeOut();
+				}
+			});
+			pagetop.click(function () {
+				$('body, html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
 
 </body>
 
