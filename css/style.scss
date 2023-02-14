@@ -27,6 +27,8 @@ body {
 	min-width: 1000px;
 	background: #2e75b6;
 	box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+	border-top: 4px solid rgb(0 0 0 / 30%);
+	border-bottom: 1px solid #fff;
 
 	h1 {
 		width: 1000px;
@@ -59,7 +61,7 @@ body {
 		ul {
 			li {
 				margin: 0 0 10px 0;
-				box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+				box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
 				position: relative;
 			}
 
