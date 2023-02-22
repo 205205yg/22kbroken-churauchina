@@ -385,6 +385,7 @@ body {
   background-image: url("../img/gradient.png");
   background-position: top center;
   background-repeat: repeat-x;
+  background-attachment: fixed;
 }
 
 #pagetop span {
@@ -419,7 +420,6 @@ body {
   background: #2e75b6;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   border-top: 4px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid #fff;
 }
 .header h1 {
   width: 1000px;
